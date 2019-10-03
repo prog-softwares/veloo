@@ -133,6 +133,22 @@ body {
     width: 40%;
 }
 
+.index__container-footer {
+    width: 340px;
+    height: 32px;
+    opacity: 0.7;
+    font-family: 'Agenda-Light';
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2.67;
+    letter-spacing: normal;
+    color: #131415;
+    margin-left: 10px;
+    margin-top: 32px;
+}
+
 @media (min-width: 768px) and (max-width: 1224px) {
     .index__container-right {
         width: 40%;
