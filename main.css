@@ -178,20 +178,19 @@ body {
         align-items: center;
         cursor: pointer;
         position: relative;
-        left: 50%;
-        transform: translateX(-50%);
         margin-top: 32px;
+        margin-left: 10px;
     }
     
     .btnmobile-primary {
-        width: 344px;
+        width: 372px;
         height: 48px;
         border-radius: 8px;
         background-color: #d45013;
         color: #fff;
     }
     .btnmobile-secondary {
-        width: 344px;
+        width: 372px;
         height: 48px;
         border-radius: 8px;
         border: solid 1px #131415;
