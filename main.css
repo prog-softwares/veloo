@@ -225,13 +225,15 @@ body {
     }
 
     .indexmobile__container-img {
-        background: url('./img/aplicacao3.png');
-        background-size: cover;
-        background-position: center center;
         width: 100%;
         height: 20vh;
     }
 
+    .indexmobile__container-img img {
+        width: 100%;
+        height: 100%;
+    }
+    
     .indexmobile__container-msg {
         margin-top: 32px;
         margin-left: 10px;
