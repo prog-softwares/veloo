@@ -153,7 +153,6 @@ body {
     body {
         overflow-y: auto;
         overflow-x: hidden;
-        background: red;
     }
     
     .btnmobile {
@@ -200,6 +199,7 @@ body {
         flex-direction: column;
         width: 100vw;
         height: 100vh;
+        overflow-x: hidden;
     }
     
     .indexmobile__container-logo {
