@@ -246,8 +246,7 @@ body {
     }
 
     .indexmobile__container-img {
-        width: 400px;
-        height: auto;
+        height: 300px;
         max-width: 100vw;
     }
 
