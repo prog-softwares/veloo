@@ -231,6 +231,7 @@ body {
     .indexmobile__container-img {
         width: 400px;
         height: auto;
+        max-width: 100vw;
     }
 
     .indexmobile__container-img img {
