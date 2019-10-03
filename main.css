@@ -151,6 +151,9 @@ body {
     margin-top: 32px;
 }
 
+.btn-send {
+    transform: translateX(0);
+}
 @media (min-width: 768px) and (max-width: 1224px) {
     .index__container-right {
         width: 40%;
@@ -291,5 +294,9 @@ body {
         color: #131415;
         margin-left: 10px;
         margin-top: 32px;
+    }
+
+    .btn-send {
+        transform: translateX(2vw);
     }
 }

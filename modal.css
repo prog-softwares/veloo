@@ -129,11 +129,10 @@
     .modal-content {
         background: #fff;
         z-index: 2;
-        height: 600px;
-        width: 620px;
+        height: 500px;
+        width: 475px;
         min-width: 300px;
         position: fixed;
-        top: 15vh;
         display: flex;
         justify-content: start;
         flex-direction: column;
