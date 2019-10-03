@@ -1,4 +1,7 @@
 
+a {
+    text-decoration: none;
+}
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: #131415;
     opacity: 0.3;
