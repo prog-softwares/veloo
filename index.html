@@ -112,6 +112,7 @@
 
         document.querySelector(".modal-background").addEventListener('click', () => {
             let modal = document.querySelector('.modal-container')
+            let error = document.querySelector('.error')
             modal.classList.add('modal-hidden')
             modal.classList.remove('modal-show')
             error.style.display = 'none'
@@ -119,6 +120,7 @@
 
         document.querySelector(".bnt-closemodal").addEventListener('click', () => {
             let modal = document.querySelector('.modal-container')
+            let error = document.querySelector('.error')
             modal.classList.add('modal-hidden')
             modal.classList.remove('modal-show')
             error.style.display = 'none'
