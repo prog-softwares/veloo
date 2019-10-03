@@ -186,6 +186,7 @@ body {
         height: 48px;
         border-radius: 8px;
         background-color: #d45013;
+        border: solid 1px #d45013;
         color: #fff;
     }
     .btnmobile-secondary {
@@ -255,8 +256,7 @@ body {
 
     .indexmobile__container-msg {
         margin-top: 32px;
-        margin-left: 10px;
-        width: 344px;
+        width: 92vw;
         height: 128px;
         opacity: 0.7;
         font-family: 'Agenda-Light';
@@ -267,6 +267,8 @@ body {
         line-height: 1.78;
         letter-spacing: normal;
         color: #131415;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
     .indexmobile__container-buttons {
