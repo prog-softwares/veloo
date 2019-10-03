@@ -63,7 +63,7 @@ body {
     width: 100vw;
     height: 100vh;
     display: flex;
-    padding-left: 10px;
+    padding-left: 100px;
     padding-right: 10px;
 }
 
@@ -145,7 +145,6 @@ body {
     line-height: 2.67;
     letter-spacing: normal;
     color: #131415;
-    margin-left: 10px;
     margin-top: 32px;
 }
 
