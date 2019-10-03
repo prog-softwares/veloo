@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./font.css" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="./modal.css" />
+    <title>Veloo</title>
+</head>
+<body>
+    <main>
+        <section class="index mobile-hidden">
+            <article class="index__container">
+                <div class="index__container-left">
+                    <div class="index__container-left-logo">
+                        <img src="./img/logo-veloo.png" />
+                    </div>
+                    <div class="index__container-left-title">
+                        <span>Entrega</span><br>
+                        <span>expressa,</span><br>
+                        <span>como você</span><br>
+                        <span>nunca viu.</span><br>
+                    </div>
+                    <div class="index__container-left-message">
+                        <span>A Veloo entrega de maneira rápida e inteligente</span> <br>
+                        <span>para o seu cliente. Reduza seus custos com entregas e seja mais </span> <br>
+                        <span>eficiente. Com a Veloo você alcança mais e mais rápido.</span>
+                    </div>
+                    <div class="index__container-left-buttons">
+                        <span class="btn btn-primary">Quero Ser entregador</span>
+                        <span class="btn btn-secondary btn-modal">Quero Ser cliente</span>
+                    </div>
+                </div>
+                <div class="index__container-right">
+                </div>
+            </article>
+        </section>
+        <!-- Mobile -->
+        <section class="indexmobile desktop-hidden">
+            <article class="indexmobile__container">
+                <div class="indexmobile__container-logo">
+                    <img src="./img/logo-veloo.png" />
+                </div>
+                <div class="indexmobile__container-title">
+                    <span>Entrega expressa,</span><br>
+                    <span>como você nunca viu</span>
+                </div>
+                <div class="indexmobile__container-img">
+                </div>
+                <div class="indexmobile__container-msg">
+                    <span>A Veloo entrega de maneira rápida e inteligente</span> <br>
+                    <span>para o seu cliente. Reduza seus custos com </span> <br>
+                    <span>entregas e seja mais eficiente. Com a Veloo </span> <br>
+                    <span>você alcança mais e mais rápido.</span>
+                </div>
+                <div class="indexmobile__container-buttons">
+                    <span class="btnmobile btnmobile-primary">Quero Ser entregador</span>
+                    <span class="btnmobile btnmobile-secondary btn-modal-mobile">Quero Ser cliente</span>
+                </div>
+                <div class="indexmobile__container-footer">
+                    <span>Vello © 2019. Todos os direitos reservados.</span>
+                </div>
+            </article>
+        </section>
+    </main>
+    <!-- Modal -->
+    <section class="modal-container modal-hidden">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <div class="modal-close">
+                <span class="bnt-closemodal">X</span>
+            </div>
+            <div class="modal-title">
+                <span>Estamos em fase de pré lançamento</span>
+            </div>
+            <div class="modal-message">
+                <span> Deixe seu contato e seja o primeiro a saber as novidades.</span>
+            </div>
+            <div class="modal-body">
+                <input class="company" type="text" placeholder="    Nome da empresa" />
+                <input class="name" type="text" placeholder="    Nome do contato" />
+                <input class="tel" type="text" placeholder="    celular" />
+            </div>
+            <div class="error">
+                <span>Preencha todos os dados antes de enviar por gentileza</span>
+            </div>
+            <div class="modal-footer">
+                    <span class="btn btn-primary sendMail">Enviar Contato</span>
+            </div>
+        </div>
+    </section>
+    <script>
+        
+        document.querySelector(".btn-modal-mobile").addEventListener('click', () => {
+            let modal = document.querySelector('.modal-container')
+            modal.classList.remove('modal-hidden')
+            modal.classList.add('modal-show')
+        }, false)
+
+        
+        document.querySelector(".btn-modal").addEventListener('click', () => {
+            let modal = document.querySelector('.modal-container')
+            modal.classList.remove('modal-hidden')
+            modal.classList.add('modal-show')
+        }, false)
+
+        document.querySelector(".modal-background").addEventListener('click', () => {
+            let modal = document.querySelector('.modal-container')
+            modal.classList.add('modal-hidden')
+            modal.classList.remove('modal-show')
+        }, false)
+
+        document.querySelector(".bnt-closemodal").addEventListener('click', () => {
+            let modal = document.querySelector('.modal-container')
+            modal.classList.add('modal-hidden')
+            modal.classList.remove('modal-show')
+        }, false)
+
+        document.querySelector('.sendMail').addEventListener('click', () => {
+            let name = document.querySelector('.name').value;
+            let company = document.querySelector('.company').value;
+            let tel = document.querySelector('.tel').value;
+            let error = document.querySelector('.error')
+
+            if(!name || !company || !tel) return error.style.display = 'flex'
+        }, false)
+    </script>
+
+</body>
+</html>

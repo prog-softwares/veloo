@@ -1,0 +1,270 @@
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #131415;
+    opacity: 0.3;
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #131415;
+    opacity: 0.3;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: #131415;
+    opacity: 0.3;
+  }
+
+.mobile-hidden {
+    display: flex;
+}
+.desktop-hidden {
+    display: none;
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: "Agenda-Light";
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 20px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.btn-primary {
+    width: 220px;
+    height: 48px;
+    border-radius: 8px;
+    background-color: #d45013;
+    color: #fff;
+}
+.btn-secondary {
+    width: 220px;
+    height: 48px;
+    border-radius: 8px;
+    border: solid 1px #131415;
+}
+
+.btn-primary:hover {
+    background-color: #d45013d0;
+}
+
+.index {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.index__container {
+    display: flex;
+    width: 100%;
+
+}
+
+.index__container-left {
+    display: flex;
+    width: 40%;
+    flex-direction: column;
+}
+
+.index__container-left-logo {
+    margin-top: 41px;
+    height: 36px;
+    width: 120px;
+}
+
+.index__container-left-logo img {
+    width: 100%;
+}
+
+.index__container-left-title {
+    margin-top: 93px;
+    width: 460px;
+    height: 275px;
+    font-family: "Agenda-MediumCondensed";
+    font-size: 72px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 0.96;
+    letter-spacing: normal;
+    color: #131415;
+}
+
+
+.index__container-left-message {
+    margin-top: 43px;
+    width: 513px;
+    height: 96px;
+    opacity: 0.7;
+    font-family: 'Agenda-Light';
+    font-size: 20px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.6;
+    letter-spacing: normal;
+    color: #131415;
+}
+
+.index__container-left-buttons {
+    margin-top: 43px;
+    display: flex;
+
+}
+
+.index__container-right {
+    background: url('./img/aplicacao3.png');
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    width: 60%;
+}
+
+@media (min-width: 768px) and (max-width: 1224px) {
+    .index__container-right {
+        width: 50%;
+    }
+
+    .index__container-left {
+        width: 50%;
+    }
+    
+}
+  
+  /* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+@media (min-width: 320px) and (max-width: 768px) {
+    
+    
+    .btnmobile {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        cursor: pointer;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 32px;
+    }
+    
+    .btnmobile-primary {
+        width: 344px;
+        height: 48px;
+        border-radius: 8px;
+        background-color: #d45013;
+        color: #fff;
+    }
+    .btnmobile-secondary {
+        width: 344px;
+        height: 48px;
+        border-radius: 8px;
+        border: solid 1px #131415;
+    }
+    
+    .btnmobile-primary:hover {
+        background-color: #d45013d0;
+    }
+    
+    .mobile-hidden {
+        display: none;
+    }
+    
+    .desktop-hidden {
+        display: flex;
+    }
+
+    .indexmobile__container,
+    .indexmobile {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+    }
+    
+    .indexmobile__container-logo {
+        margin-top: 69px;
+        width: 120px;
+        height: 36px;
+        margin-left: 10px;
+    }
+    
+    .indexmobile__container-logo img {
+        width: 100%;
+    }
+
+    .indexmobile__container-title {
+        margin-top: 32px;
+        font-family: "Agenda-MediumCondensed";
+        width: 344px;
+        height: 78px;
+        font-size: 32px;
+        font-weight: 600;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.22;
+        letter-spacing: normal;
+        color: #131415;
+        margin-left: 10px;
+    }
+
+    .indexmobile__container-img {
+        background: url('./img/aplicacao3.png');
+        background-size: cover;
+        background-position: center center;
+        width: 100%;
+        height: 241px;
+    }
+
+    .indexmobile__container-msg {
+        margin-top: 32px;
+        margin-left: 10px;
+        width: 344px;
+        height: 128px;
+        opacity: 0.7;
+        font-family: 'Agenda-Light';
+        font-size: 18px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.78;
+        letter-spacing: normal;
+        color: #131415;
+    }
+
+    .indexmobile__container-buttons {
+        margin-top: 32px;
+    }
+
+    .indexmobile__container-footer {
+        width: 340px;
+        height: 32px;
+        opacity: 0.7;
+        font-family: 'Agenda-Light';
+        font-size: 12px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 2.67;
+        letter-spacing: normal;
+        color: #131415;
+        margin-left: 10px;
+        margin-top: 32px;
+    }
+}
