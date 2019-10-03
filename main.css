@@ -225,15 +225,15 @@ body {
     }
 
     .indexmobile__container-img {
-        width: 100%;
-        height: 20vh;
+        width: 400px;
+        height: auto;
     }
 
     .indexmobile__container-img img {
         width: 100%;
         height: 100%;
     }
-    
+
     .indexmobile__container-msg {
         margin-top: 32px;
         margin-left: 10px;
