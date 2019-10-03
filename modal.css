@@ -6,7 +6,7 @@
     width: 90vw;
     min-width: 300px;
     position: fixed;
-    top: 10vh;
+    top: 2vh;
     display: flex;
     justify-content: start;
     flex-direction: column;
