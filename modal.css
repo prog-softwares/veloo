@@ -3,6 +3,9 @@
         outline-color: none;
         box-shadow: none;
     }
+  input:focus {
+      outline-color: none;
+  }
   
   .modal-content {
         z-index: 2;
@@ -30,7 +33,8 @@
     align-content: center;
     align-items: center;
     width: 100%;
-    min-height: 85vh;
+    min-height: 70vh;
+    padding-bottom: 10px;
 
 }
 .modal-container {
