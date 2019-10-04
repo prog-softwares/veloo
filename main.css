@@ -30,7 +30,7 @@ a {
 
 body {
     overflow-x: hidden;
-    font-family: "Agenda-Light";
+    font-family: 'Agenda-LightCondensed';
 }
 
 .btn {
@@ -112,7 +112,7 @@ body {
     width: 513px;
     height: 96px;
     opacity: 0.7;
-    font-family: 'Agenda-Light';
+    font-family: 'Agenda-LightCondensed';
     font-size: 20px;
     font-weight: normal;
     font-style: normal;
@@ -140,7 +140,7 @@ body {
     width: 340px;
     height: 32px;
     opacity: 0.7;
-    font-family: 'Agenda-Light';
+    font-family: 'Agenda-LightCondensed';
     font-size: 12px;
     font-weight: normal;
     font-style: normal;
@@ -262,7 +262,7 @@ body {
         width: 92vw;
         height: 128px;
         opacity: 0.7;
-        font-family: 'Agenda-Light';
+        font-family: 'Agenda-LightCondensed';
         font-size: 18px;
         font-weight: normal;
         font-style: normal;
@@ -284,7 +284,7 @@ body {
         width: 340px;
         height: 32px;
         opacity: 0.7;
-        font-family: 'Agenda-Light';
+        font-family: 'Agenda-LightCondensed';
         font-size: 12px;
         font-weight: normal;
         font-style: normal;
