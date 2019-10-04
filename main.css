@@ -68,6 +68,8 @@ body {
     display: flex;
     padding-left: 100px;
     padding-right: 10px;
+    min-height: 100vh;
+    
 }
 
 .index__container {
