@@ -103,6 +103,9 @@
             let modal = document.querySelector('.modal-container')
             modal.classList.remove('modal-hidden')
             modal.classList.add('modal-show')
+            document.querySelector('.indexmobile').style.overflowY = 'hidden';
+            document.querySelector('.indexmobile__container').style.overflowY = 'hidden';
+            document.querySelector('body').style.overflowY = 'hidden';
         }, false)
 
         
@@ -118,6 +121,10 @@
             modal.classList.add('modal-hidden')
             modal.classList.remove('modal-show')
             error.style.display = 'none'
+            document.querySelector('.indexmobile').style.overflowY = 'auto';
+            document.querySelector('.indexmobile__container').style.overflowY = 'auto';
+            document.querySelector('.index').style.overflowY = 'auto';
+            document.querySelector('body').style.overflowY = 'auto';
         }, false)
 
         document.querySelector(".bnt-closemodal").addEventListener('click', () => {

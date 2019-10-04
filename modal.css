@@ -1,4 +1,9 @@
 
+  input {
+        outline-color: none;
+        box-shadow: none;
+    }
+  
   .modal-content {
         z-index: 2;
         height: 500px;
@@ -135,6 +140,14 @@
 }
 
 
+.modal-content .btn-primary {
+    width: 86vw;
+    height: 47px;
+    border-radius: 8px;
+    background-color: #d45013;
+    color: #fff;
+    margin-left: 20px;
+}
 
 /* Desktop */
 
@@ -152,6 +165,8 @@
         padding: 10px;
         border-radius: 8px;
         background-color: #f5f5f5;
+        top: 50vh;
+        overflow: hidden;
     }
 
     .modal-container {
@@ -256,4 +271,9 @@
         border-radius: 8px;
         display: none;
     }
+
+    .modal-content .btn-primary {
+        width: 471px;
+    }
+    
 }
