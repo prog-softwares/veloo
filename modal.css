@@ -64,7 +64,7 @@
     letter-spacing: normal;
     text-align: center;
     color: #131415;
-    font-family: 'Agenda-Light';
+    font-family: 'Agenda-LightCondensed';
 }
 
 .modal-background {
@@ -229,7 +229,7 @@
         letter-spacing: normal;
         text-align: center;
         color: #131415;
-        font-family: 'Agenda-Light';
+        font-family: 'Agenda-LightCondensed';
     }
     
     .modal-footer {
