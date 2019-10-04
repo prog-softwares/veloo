@@ -52,6 +52,7 @@
     color: #b7b7b7;
     margin-right: 20px;
     position: relative;
+    top: 10px;
 }
 
 .modal-close span {
