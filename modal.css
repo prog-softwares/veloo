@@ -1,21 +1,34 @@
 
   .modal-content {
-    overflow-y: auto;
-    background: #fff;
-    z-index: 2;
-    width: 90vw;
-    position: fixed;
-    top: 50vh;
-    display: flex;
-    justify-content: start;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    border-radius: 8px;
-    background-color: #f5f5f5;
-    transform: translateY(-50%);
+        z-index: 2;
+        height: 500px;
+        width: 475px;
+        min-width: 300px;
+        position: relative;
+        display: flex;
+        justify-content: start;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        border-radius: 8px;
+        background-color: #f5f5f5;
+        max-height: 100vh;
+        top: -50vh;
+        transform: translateY(-50%);
+        overflow-y: auto;
+        overflow-x: hidden;
 }
+.modal-overflow {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    height: 80v;
+    width: 100%;
+    min-height: 80vh;
 
+}
 .modal-container {
     justify-content: center;
     align-content: center;
@@ -55,7 +68,7 @@
     width: 90vw;
     height: 52px;
     opacity: 0.7;
-    margin-top: 8px;
+    margin-top: 32px;
     font-size: 20px;
     font-weight: normal;
     font-style: normal;
@@ -98,7 +111,7 @@
 }
 
 .modal-body input {
-    width: 90vw;
+    width: 83vw;
     height: 48px;
     border-radius: 4px;
     border: solid 1px #dddddd;
@@ -127,7 +140,6 @@
 
 @media (min-width: 769px) {
     .modal-content {
-        background: #fff;
         z-index: 2;
         height: 500px;
         width: 475px;
