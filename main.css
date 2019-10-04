@@ -98,7 +98,7 @@ body {
     margin-top: 93px;
     width: 460px;
     height: 275px;
-    font-family: "Agenda-Bold";
+    font-family: "Agenda";
     font-size: 72px;
     font-weight: 600;
     font-style: normal;
@@ -237,7 +237,7 @@ body {
 
     .indexmobile__container-title {
         margin-top: 32px;
-        font-family: "Agenda-Bold";
+        font-family: "Agenda";
         width: 344px;
         height: 78px;
         font-size: 32px;
