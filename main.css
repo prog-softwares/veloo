@@ -31,6 +31,8 @@ a {
 body {
     overflow-x: hidden;
     font-family: 'Agenda';
+    overflow-y: hidden;
+    background: #f5f5f5;
 }
 
 .btn {
@@ -80,7 +82,7 @@ body {
 
 .index__container-left {
     display: flex;
-    width: 60%;
+    width: 55%;
     flex-direction: column;
 }
 
@@ -99,7 +101,7 @@ body {
     width: 460px;
     height: 275px;
     font-family: "Agenda";
-    font-size: 72px;
+    font-size: 64px;
     font-weight: 600;
     font-style: normal;
     font-stretch: normal;
@@ -135,7 +137,7 @@ body {
     background-size: cover;
     background-position: center center;
     display: flex;
-    width: 40%;
+    width: 45%;
 }
 
 .index__container-footer {
@@ -158,11 +160,11 @@ body {
 }
 @media (min-width: 768px) and (max-width: 1224px) {
     .index__container-right {
-        width: 40%;
+        width: 45%;
     }
 
     .index__container-left {
-        width: 60%;
+        width: 55%;
     }
     
 }
@@ -174,8 +176,10 @@ body {
   
 @media (min-width: 320px) and (max-width: 768px) {
     body {
-        overflow-y: auto;
         overflow-x: hidden;
+        font-family: 'Agenda';
+        overflow-y: auto;
+        background: #f5f5f5;
     }
     
     .btnmobile {
