@@ -270,7 +270,7 @@
     .error {
         background: #eb4d4b;
         padding: 10px;
-        margin: 32px;
+        margin-top: 32px;
         color: #fff;
         border-radius: 8px;
         display: none;
