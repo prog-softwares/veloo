@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="./font.css" />
     <link rel="stylesheet" href="main.css" />
     <link rel="stylesheet" href="./modal.css" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-149453169-1"></script>
     <title>Veloo</title>
 </head>
 <body>
@@ -98,6 +100,11 @@
         </div>
     </section>
     <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-149453169-1');
         
         document.querySelector(".btn-modal-mobile").addEventListener('click', () => {
             let modal = document.querySelector('.modal-container')
