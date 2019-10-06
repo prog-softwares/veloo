@@ -79,17 +79,19 @@
                 <div class="modal-message">
                     <span> Deixe seu contato e seja o primeiro a saber as novidades.</span>
                 </div>
-                <div class="modal-body">
-                    <input class="company" type="text" placeholder="    Nome da empresa" />
-                    <input class="name" type="text" placeholder="    Nome do contato" />
-                    <input class="tel" type="text" placeholder="    celular" />
-                </div>
-                <div class="error">
-                    <span>Preencha todos os dados antes de enviar por gentileza</span>
-                </div>
-                <div class="modal-footer">
+                <form action="https://formspree.io/mggonoam" method="POST" id="form-cliente"></form>
+                    <div class="modal-body">
+                        <input class="company" type="text" placeholder="    Nome da empresa" />
+                        <input class="name" type="text" placeholder="    Nome do contato" />
+                        <input class="tel" type="text" placeholder="    celular" />
+                    </div>
+                    <div class="error">
+                        <span>Preencha todos os dados antes de enviar por gentileza</span>
+                    </div>
+                    <div class="modal-footer">
                         <span class="btn btn-primary btn-send sendMail">Enviar Contato</span>
-                </div>
+                   </div>
+                </form>
             </div>
         </div>
     </section>
@@ -137,7 +139,12 @@
             let tel = document.querySelector('.tel').value;
             let error = document.querySelector('.error')
 
-            if(!name || !company || !tel) return error.style.display = 'flex'
+            if(!name || !company || !tel){
+                error.style.margin = "32px !important";
+                return error.style.display = 'flex';
+            } 
+            else 
+                form.submit();
         }, false)
     </script>
 
