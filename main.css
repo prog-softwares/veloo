@@ -97,9 +97,8 @@ body {
 }
 
 .index__container-left-title {
-    margin-top: 93px;
+    margin-top: 43px;
     width: 460px;
-    height: 275px;
     font-family: "Agenda";
     font-size: 64px;
     font-weight: 600;
@@ -112,8 +111,8 @@ body {
 
 
 .index__container-left-message {
+    margin-top: 33px;
     width: 513px;
-    height: 134px;
     opacity: 0.7;
     font-family: 'Agenda';
     font-size: 20px;
@@ -265,7 +264,6 @@ body {
     .indexmobile__container-msg {
         margin-top: 32px;
         width: 92vw;
-        height: 128px;
         opacity: 0.7;
         font-family: 'Agenda';
         font-size: 18px;
