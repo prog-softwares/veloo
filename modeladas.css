@@ -112,7 +112,7 @@ body {
 .footer {
     height: 3vh;
     background: #f5f5f5;
-    position: absolute;
+    position: fixed;
     left: 0;
     bottom: 0;
     width: 100vw;
@@ -136,6 +136,6 @@ body {
 
 @media (min-width: 320px) and (max-width: 768px) {
     .modeladas {
-        overflow-y: hidden;
+        overflow-y: auto;
     }
 }
