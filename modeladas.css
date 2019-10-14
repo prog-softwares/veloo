@@ -1,7 +1,15 @@
+html, body {
+    height:100%;
+}
+
+body {
+    background: url(img/bg-image.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
 .modeladas {
-    background: url(./img/bg-image.png);
-    background-size: inherit;
-    background-position: center center;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -10,7 +18,7 @@
     align-items: center;
     flex-direction: column;
     position: relative;
-    overflow-y: auto;
+    overflow-y: hidden;
 }
 
 .modeladas__form {
@@ -124,4 +132,10 @@
     letter-spacing: normal;
     color: #131415;
     margin-left: 10px;
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+    .modeladas {
+        overflow-y: hidden;
+    }
 }
