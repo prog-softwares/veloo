@@ -33,6 +33,7 @@ body {
     align-items: center;
     padding-top: 20px;
     padding-bottom: 20px;
+    overflow-y: auto;
 }
 
 .modeladas__form--title {
@@ -132,10 +133,4 @@ body {
     letter-spacing: normal;
     color: #131415;
     margin-left: 10px;
-}
-
-@media (min-width: 320px) and (max-width: 768px) {
-    .modeladas {
-        overflow-y: auto;
-    }
 }
