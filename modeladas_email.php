@@ -18,10 +18,16 @@ $body = $body . "TELEFONE:  " . $tel . "\n\n";
 $body = $body . "" . "\n";
 
 // envia o email
-mail($destinatario, $assunto , $body, "From: $destinatario\r\n");
+try {
+    mail($destinatario, $assunto , $body, "From: $destinatario\r\n");
+    echo 'ok';
+    exit();
+}  catch (Exception $e) {
+    echo $e;
+}
 
 ?>
-<html>
+<!--<html>
     <head>
     </head>
     <body>
@@ -41,9 +47,9 @@ mail($destinatario, $assunto , $body, "From: $destinatario\r\n");
 
         <script>
             window.setTimeout(function(){
-                // Move to a new location or you can do something else
+                
                 window.location.href = "modeladas.html";
             }, 3000);
         </script>
     </body>
-</html>
+</html>-->

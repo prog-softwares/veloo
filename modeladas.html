@@ -10,11 +10,18 @@
     <link rel="stylesheet" href="main.css" />
     <link rel="stylesheet" href="message.css" />
     <link rel="stylesheet" href="./modeladas.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-149453169-1"></script>
     <title>Veloo</title>
 </head>
 <body>
+    <div class="message animated" onclick="closeMessage()">
+        <span class="container-icon">
+                <i class="fas fa-info-circle"></i>
+        </span>
+        <span class="content">Preencha todos os dados antes de prosseguir</span>
+    </div>
     <main>
         <section class="modeladas">
             <div class="modeladas__form">
@@ -32,9 +39,9 @@
             </div>
         </section>
     </main>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    <!--<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
 			integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
-			crossorigin="anonymous"></script>
+			crossorigin="anonymous"></script>-->
     <script>
         function sendModeladas() {
             let nome= document.querySelector('#nome');
@@ -44,15 +51,33 @@
             if(!nome.value.length || !email.value.length || !telefone.value.length) {
                 messageError()
             } else {
-                nome.value = ''
-                nome.email = ''
-                nome.telefone = ''
-                form.submit()
-                messageSuccess()
+                let frm = $('#formModeladas');
+
+                $.ajax({
+                    type: "POST",
+                    url: 'modeladas_email.php',
+                    data: frm.serialize(), 
+                    success: function(return_data){
+                        if(return_data === 'ok'){
+                            messageSuccess()
+                            nome.value = ''
+                            email.value = ''
+                            telefone.value = ''
+                        }else{
+                            messageError()
+                            document.querySelector('.message .content').innerHTML = return_data
+                        }
+                    },
+                    error: function (err) {
+                        messageError()
+                        document.querySelector('.message .content').innerHTML = 'Ocorreu um erro: ' + err
+                    }
+                });               
+                
             }
         }
 
-        function messageSuccess() {
+        function messageError() {
             let message = document.querySelector('.message')
             let content = document.querySelector('.message .content')
             message.classList.remove('message-success')
@@ -78,6 +103,7 @@
             message.classList.remove('fadeIn')
             message.classList.add('fadeOut')
         }
+        
     </script>
 </body>
 </html>
