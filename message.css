@@ -1,0 +1,48 @@
+.message {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100vw;
+    height: 5vh;
+    font-family: "Agenda";
+    font-size: 20px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #fff;
+    align-content: center;
+    align-items: center;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 999;
+}
+.message .container-icon {
+    flex: 1;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border-right: 3px solid;
+    height: 90%;
+}
+
+.message .content {
+    flex: 20;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    display: flex;
+}
+
+
+.message-success {
+    background: #1dd1a1;
+}
+
+.message-error {
+    background: #ff6b6b;
+}

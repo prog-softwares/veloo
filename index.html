@@ -6,12 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./font.css" />
     <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="message.css" />
     <link rel="stylesheet" href="./modal.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-149453169-1"></script>
     <title>Veloo</title>
 </head>
 <body>
+    <div class="message animated" onclick="closeMessage()">
+        <span class="container-icon">
+                <i class="fas fa-info-circle"></i>
+        </span>
+        <span class="content">Preencha todos os dados antes de prosseguir</span>
+    </div>
     <main>
         <section class="index mobile-hidden">
             <article class="index__container">
@@ -96,6 +105,33 @@
         </div>
     </section>
     <script>
+           function messageError() {
+            let message = document.querySelector('.message')
+            let content = document.querySelector('.message .content')
+            message.classList.remove('message-success')
+            message.classList.add('message-error')
+            message.classList.remove('fadeOut')
+            message.classList.add('fadeIn')
+            message.classList.add('animated')
+            content.innerHTML = "Preencha todos os dados antes de prosseguir"
+        }
+
+        function messageSuccess() {
+            let message = document.querySelector('.message')
+            let content = document.querySelector('.message .content')
+            message.classList.remove('message-error')
+            message.classList.add('message-success')
+            message.classList.remove('fadeOut')
+            message.classList.add('fadeIn')
+            content.innerHTML = "Contato enviado"
+        }
+
+        function closeMessage() {
+            let message = document.querySelector('.message')
+            message.classList.remove('fadeIn')
+            message.classList.add('fadeOut')
+        }
+
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
@@ -134,17 +170,21 @@
         }, false)
 
         document.querySelector('.sendMail').addEventListener('click', () => {
-            let name = document.querySelector('.name').value;
-            let company = document.querySelector('.company').value;
-            let tel = document.querySelector('.tel').value;
+            let name = document.querySelector('.name');
+            let company = document.querySelector('.company');
+            let tel = document.querySelector('.tel');
             let error = document.querySelector('.error');
             let form = document.forms.namedItem("form-cliente");
 
-            if(!name || !company || !tel){
-                return error.style.display = 'flex';
-            } 
-            else 
+            if(!name.value.length || !company.value.length || !tel.value.length){
+                messageError();
+                name.value = ''
+                company.value = ''
+                tel.value = ''
+            } else {
+                messageSuccess();
                 form.submit();
+            } 
         }, false)
     </script>
 

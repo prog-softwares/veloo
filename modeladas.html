@@ -8,29 +8,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link rel="stylesheet" href="./font.css" />
     <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="message.css" />
     <link rel="stylesheet" href="./modeladas.css" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-149453169-1"></script>
     <title>Veloo</title>
 </head>
 <body>
-    <div class="message animated" onclick="closeMessage()">
-        <span class="container-icon">
-             <i class="fas fa-info-circle"></i>
-        </span>
-        <span class="content">Preencha todos os dados antes de prosseguir</span>
-    </div>
     <main>
         <section class="modeladas">
             <div class="modeladas__form">
                 <div class="modeladas__form--title">
                     Cadastre-se e concorra a uma viseira super estilosa!
                 </div>
-                <div class="modeladas-inputs">
+                <form class="modeladas-inputs" action="modeladas_email.php" id="formModeladas">
                     <input placeholder="Nome" name="nome" id="nome" />
                     <input placeholder="Email" name="email" id="email" />
                     <input placeholder="Telefone com DDD" name="tel" id="tel" />
-                </div>
+                </form>
                 <div class="modeladas-footer">
                     <span class="modeladas-btn" onclick="sendModeladas()">Enviar contato</span>
                 </div>
@@ -42,14 +37,18 @@
 			crossorigin="anonymous"></script>
     <script>
         function sendModeladas() {
-            let nome= document.querySelector('#nome').value;
-            let email= document.querySelector('#email').value;
-            let telefone= document.querySelector('#tel').value;
-            if(!nome.length || !email.length || !telefone.length) {
-                sendForm(nome,email,telefone)
-                messageSuccess()
-            } else {
+            let nome= document.querySelector('#nome');
+            let email= document.querySelector('#email');
+            let telefone= document.querySelector('#tel');
+            let form = document.querySelector("#formModeladas");
+            if(!nome.value.length || !email.value.length || !telefone.value.length) {
                 messageError()
+            } else {
+                nome.value = ''
+                nome.email = ''
+                nome.telefone = ''
+                form.submit()
+                messageSuccess()
             }
         }
 
@@ -64,28 +63,20 @@
             content.innerHTML = "Preencha todos os dados antes de prosseguir"
         }
 
-        function messageError() {
+        function messageSuccess() {
             let message = document.querySelector('.message')
             let content = document.querySelector('.message .content')
             message.classList.remove('message-error')
             message.classList.add('message-success')
             message.classList.remove('fadeOut')
             message.classList.add('fadeIn')
-            content.innerHTML = "Enviado com Sucesso"
+            content.innerHTML = "Contato enviado"
         }
 
         function closeMessage() {
             let message = document.querySelector('.message')
             message.classList.remove('fadeIn')
             message.classList.add('fadeOut')
-        }
-
-       async function sendForm(nome, email, telefone) {
-            console.log('aqui')
-            $.post("modeladas_email.php", { nome, email, telefone } )
-                .done(function(data) {
-                    alert("response: " + data);        
-            });
         }
     </script>
 </body>
