@@ -41,13 +41,11 @@ body {
     font-weight: 600;
     font-style: normal;
     font-stretch: normal;
-    line-height: normal;
     letter-spacing: normal;
     text-align: center;
     color: #131415;
     text-align: center;
     margin-bottom: 19px;
-    line-height: 1.6;
 }
 
 
@@ -58,7 +56,6 @@ body {
     font-weight: normal;
     font-style: normal;
     font-stretch: normal;
-    line-height: 1.6;
     letter-spacing: normal;
     text-align: center;
     color: #131415;
