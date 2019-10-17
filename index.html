@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./modal.css" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-149453169-1"></script>
     <title>Veloo</title>
@@ -174,16 +175,30 @@
             let company = document.querySelector('.company');
             let tel = document.querySelector('.tel');
             let error = document.querySelector('.error');
-            let form = document.forms.namedItem("form-cliente");
-
             if(!name.value.length || !company.value.length || !tel.value.length){
                 messageError();
-                name.value = ''
-                company.value = ''
-                tel.value = ''
             } else {
-                messageSuccess();
-                form.submit();
+                let frm = $('#form-cliente');
+                $.ajax({
+                    type: "POST",
+                    url: 'email.php',
+                    data: frm.serialize(), 
+                    success: function(return_data){
+                        if(return_data === 'ok'){
+                            messageSuccess()
+                            name.value = ''
+                            company.value = ''
+                            tel.value = ''
+                        }else{
+                            messageError()
+                            document.querySelector('.message .content').innerHTML = return_data
+                        }
+                    },
+                    error: function (err) {
+                        messageError()
+                        document.querySelector('.message .content').innerHTML = 'Ocorreu um erro: ' + err
+                    }
+                });     
             } 
         }, false)
     </script>

@@ -51,8 +51,8 @@ body {
 }
 
 
-.modeladas--form-subtitle {
-    width: 100%;
+.modeladas__form--subtitle {
+    width: 80%;
     opacity: 0.7;
     font-size: 20px;
     font-weight: normal;

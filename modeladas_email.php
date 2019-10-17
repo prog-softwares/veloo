@@ -1,5 +1,5 @@
 <?php
-$destinatario = "veloo.contato@gmail.com";
+$destinatario = "veloobrasil@gmail.com";
 
 $email = $_REQUEST['email'];
 $nome_contato = $_REQUEST['nome'];
